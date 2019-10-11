@@ -13,7 +13,9 @@ ENDCLASS.
 CLASS zcl_hello_world IMPLEMENTATION.
 
   METHOD if_oo_adt_classrun~main.
-    data(message) = |hello world|.
+    data(name) = out->get( ).
+    data(message) = |hello { name }|. "review changes incorporated
+    out->write( message ).
   ENDMETHOD.
 
 ENDCLASS.
